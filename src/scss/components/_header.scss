@@ -1,0 +1,22 @@
+.header {
+  position: relative;
+  z-index: 2;
+  padding: 12px 0;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    margin-right: 30px;
+  }
+
+  &__btn {
+  }
+
+  &__languages {
+    margin-right: 30px;
+    margin-left: auto;
+  }
+}

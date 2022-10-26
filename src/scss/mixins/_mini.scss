@@ -1,0 +1,166 @@
+/* stylelint-disable */
+
+@mixin bg-cover {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@mixin flex {
+  display: flex;
+}
+
+@mixin flex-v-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-h-center {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flex-all-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-sb {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin flex-all-sb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+$browser-context: 16; // Default
+
+@function rem($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}rem;
+}
+
+@mixin max-w-full-hd {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1920px;
+}
+
+@mixin image-set($pathToImage) {
+  background-image: url('#{$pathToImage}.jpg');
+  background-image: image-set(
+    /* stylelint-disable-next-line function-comma-newline-after */
+      '#{$pathToImage}.avif'type('image/avif'),
+    '#{$pathToImage}.webp'type('image/webp'),
+    '#{$pathToImage}.jpg'type('image/jpg')
+  );
+}
+
+@mixin blockOuterContainer {
+  display: flex;
+  padding-left: max(15px, calc((100% - $content-width) / 2));
+
+  // *:first-child {
+  //   width: $box-width;
+  //   margin-right: $offset;
+  //   flex-shrink: 0;
+  // }
+
+  // *:last-child {
+  //   width: calc(100% - $box-width - $offset);
+  // }
+}
+
+@mixin footerToBottom {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+@mixin mr($value) {
+  &:not(:last-child) {
+    margin-right: $value;
+  }
+}
+
+@mixin ml($value) {
+  &:not(:last-child) {
+    margin-left: $value;
+  }
+}
+
+@mixin mb($value) {
+  &:not(:last-child) {
+    margin-bottom: $value;
+  }
+}
+
+@mixin mt($value) {
+  &:not(:last-child) {
+    margin-top: $value;
+  }
+}
+
+@mixin pseudo() {
+  content: '';
+  display: block;
+}
+
+@mixin circle($size: 56px, $color: $primary-color) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  background-color: $color;
+}
+
+@mixin triangle($size: 19px) {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 $size $size 0;
+  border-color: transparent $primary-color transparent transparent;
+}
+
+@mixin absolute-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin bg-decor($size: 40px) {
+  content: "";
+  position: absolute;
+  user-select: none;
+  appearance: none;
+  width: $size;
+  height: $size;
+  background: url("../img/decor-box.svg") center / cover no-repeat;
+}
+
+@mixin hover-google {
+  rect {
+    &:first-child {
+      fill: black;
+    }
+  }
+  path {
+    fill: #fff;
+    &:nth-last-child(5) {
+      fill: #EA4335;
+    }
+    &:nth-last-child(4) {
+      fill: #FBBC04;
+    }
+    &:nth-last-child(3) {
+      fill: #4285F4;
+    }
+    &:nth-last-child(2) {
+      fill: #34A853;
+    }
+  }
+}

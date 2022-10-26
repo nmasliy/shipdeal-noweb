@@ -1,0 +1,218 @@
+.hero {
+  position: relative;
+  margin-top: calc(var(--header-height) * -1);
+  padding-top: calc(var(--header-height) + 65px);
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 35vw;
+    min-height: 800px;
+    background: url("../img/hero-bg-items.svg") bottom right no-repeat;
+    background-color: $primary-color;
+  }
+
+  &__inner {
+    @include blockOuterContainer;
+  }
+
+  &__content {
+    position: relative;
+    flex-shrink: 0;
+    padding-bottom: 50px;
+    width: 100%;
+    max-width: 642px;
+
+    &::before {
+      @include bg-decor(47px);
+
+      left: -115px;
+      top: 0;
+    }
+
+    &::after {
+      @include bg-decor;
+
+      left: 70%;
+      bottom: 40px;
+    }
+  }
+
+  &__img {
+    flex-shrink: 0;
+    width: 1050px;
+
+    picture {
+      display: flex;
+    }
+
+    &-mob {
+      display: none;
+    }
+  }
+
+  &__tabs {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    padding: 0 1px;
+    color: $accent-color;
+
+    a {
+      display: flex;
+      align-items: center;
+      margin: 0 -1px;
+      border: 1px solid rgba($accent-color, 0.8);
+      padding: 12px 30px;
+      height: 48px;
+      font-weight: 500;
+
+      svg {
+        flex-shrink: 0;
+        margin-right: 6px;
+
+        path {
+          stroke: currentcolor;
+        }
+      }
+
+      &:not(.active) {
+        &:active,
+        &:focus {
+          -webkit-text-fill-color: transparent;
+          /* stylelint-disable-next-line property-no-unknown */
+          text-fill-color: transparent;
+          color: $accent-color;
+          background: $accent-gradient;
+          -webkit-background-clip: text;
+          background-clip: text;
+        }
+
+        @include hover {
+          color: #ec9007;
+        }
+      }
+
+      &:first-child {
+        border-radius: 50px 0 0 50px;
+        padding-right: 40px;
+        padding-left: 40px;
+      }
+
+      &:last-child {
+        border-radius: 0 50px 50px 0;
+      }
+
+      &.active {
+        position: relative;
+        height: 54px;
+        color: $white-color;
+        background: $accent-gradient;
+      }
+    }
+  }
+
+  &__title {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: -26px;
+      top: -56px;
+      width: 125px;
+      height: 75px;
+      background: url("../img/decor-arrow-1.svg") center no-repeat;
+    }
+  }
+
+  &__subtitle {
+    margin: 37px 0 50px;
+    line-height: 1.8;
+    text-transform: uppercase;
+  }
+
+  &__caption {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+
+    b {
+      font-weight: 700;
+      color: #265feb;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+  }
+
+  &__btn {
+    @include mr(20px);
+
+    @include hover {
+      path {
+        fill: $white-color;
+      }
+
+      rect {
+        &:first-child {
+          fill: #000;
+        }
+
+        &:last-child {
+          stroke: #a6a6a6;
+        }
+      }
+
+      &:first-child {
+        @include hover-google;
+      }
+    }
+
+    /* stylelint-disable-next-line order/order */
+    display: flex;
+
+    svg {
+      height: auto;
+    }
+
+    path,
+    rect {
+      transition: $transition;
+    }
+
+    &:focus,
+    &:active {
+      path {
+        fill: $white-color;
+
+        &:nth-last-child(5) {
+          fill: $white-color;
+        }
+
+        &:nth-last-child(4) {
+          fill: $white-color;
+        }
+
+        &:nth-last-child(3) {
+          fill: $white-color;
+        }
+
+        &:nth-last-child(2) {
+          fill: $white-color;
+        }
+      }
+
+      rect {
+        &:first-child {
+          fill: #000;
+        }
+      }
+    }
+  }
+}

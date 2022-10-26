@@ -1,0 +1,41 @@
+.form {
+  &__caption {
+    margin-bottom: 5px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgba($white-color, 0.8);
+  }
+
+  &__input {
+    display: block;
+    border-radius: 8px;
+    padding: 24px 30px;
+    width: 100%;
+    font-family: $font-family;
+    line-height: 1.5;
+    color: inherit;
+
+    &::placeholder {
+      color: rgba(0, 0, 0, 50%);
+    }
+
+    &--price {
+      padding: 10px 30px;
+      font-weight: 600;
+      font-size: 34px;
+      color: #ffa928;
+      background-color: rgba(29, 27, 27, 16%);
+
+      &::placeholder {
+        color: #ffa928;
+      }
+    }
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 322px 322px 175px 175px;
+    margin-bottom: 50px;
+    gap: 24px;
+  }
+}

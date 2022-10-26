@@ -1,0 +1,34 @@
+<header class="header">
+  <div class="container">
+    <div class="header__inner">
+      <a class="header__logo logo" href="./">
+        <picture>
+          <source srcset="img/logo.avif 1x, img/logo@2x.avif 2x" type="image/avif">
+          <source srcset="img/logo.webp 1x, img/logo@2x.webp 2x" type="image/webp">
+          <img loading="lazy" src="img/logo.png" srcset="img/logo.png 1x, img/logo@2x.png 2x" width="166" height="37" alt="Ship&Deal">
+        </picture>
+      </a>
+      <div class="menu" data-menu>
+        @include('nav.html', {classes: 'header__nav'})
+        <div class="menu__footer">
+          @include('contacts-info.html')
+        </div>
+      </div>
+      <div class="header__languages">
+        <div class="app-select" id="select-languages">
+          <div class="app-select__current">
+            <span class="app-select__value" data-value="1">DEU</span>
+          </div>
+          <div class="app-select__options">
+            <a href="index-en.html" class="app-select__option" data-value="2">ENG</a>
+            <a href="index.html" class="app-select__option" data-value="3">RUS</a>
+          </div>
+        </div>
+      </div>
+      <a class="header__btn btn-outline" href="#">Anmelden</a>
+      <button class="burger" data-burger aria-label="Open menu">
+        <span class="burger__line"></span>
+      </button>
+    </div>
+  </div>
+</header>

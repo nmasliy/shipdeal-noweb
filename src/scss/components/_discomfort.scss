@@ -1,0 +1,30 @@
+.discomfort {
+  padding: 140px 0;
+  background-color: #f2f6fe;
+
+  &__inner {
+    margin: 0 auto;
+    max-width: 760px;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr 1fr;
+    gap: 40px 70px;
+  }
+
+  &__item {
+    text-align: center;
+  }
+
+  &__icon {
+    @include circle(60px);
+    @include flex-all-center;
+
+    margin: 0 auto 12px;
+  }
+}

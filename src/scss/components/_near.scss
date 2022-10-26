@@ -1,0 +1,31 @@
+.near {
+  margin-bottom: 100px;
+
+  &__inner {
+    position: relative;
+
+    &::before {
+      @include bg-decor(43px);
+
+      right: 79px;
+      top: -46px;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      @include bg-decor(60px);
+
+      left: -103px;
+      bottom: -104px;
+      transform: rotate(45deg);
+    }
+  }
+
+  &__title {
+    margin-bottom: 50px;
+  }
+
+  &__map {
+    text-align: center;
+  }
+}

@@ -1,0 +1,46 @@
+.title {
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 1.2;
+  color: $black-color;
+
+  &-lg {
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 1.2;
+    color: $black-color;
+  }
+
+  &-sm {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 1.4;
+    color: $black-color;
+  }
+}
+
+.subtitle {
+  margin-top: 20px;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.color-primary {
+  color: $primary-color;
+}
+
+.color-accent {
+  color: $accent-color;
+}
+
+.accent-badge {
+  border-radius: 10px;
+  padding: 2px 12px;
+  background-image: $accent-gradient;
+  background-color: $accent-color;
+
+  &--offset {
+    margin-right: 12px;
+    margin-left: 4px;
+  }
+}

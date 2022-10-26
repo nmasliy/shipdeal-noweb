@@ -1,0 +1,34 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// подключения компонентов страницы
+@import "./components/ui";
+@import "./components/header";
+@import "./components/contacts-info";
+@import "./components/text-content";
+@import "./components/hero";
+@import "./components/hero-benefits";
+@import "./components/why";
+@import "./components/near";
+@import "./components/examples";
+@import "./components/benefits";
+@import "./components/reviews";
+@import "./components/discomfort";
+@import "./components/action";
+@import "./components/how";
+@import "./components/delivery";
+@import "./components/video";
+@import "./components/ship";
+@import "./components/calculator";
+@import "./components/kids";
+@import "./components/questions";
+@import "./components/earn";
+@import "./components/history";
+@import "./components/contacts";
+@import "./components/footer";
+
+// адаптив
+@import "media";

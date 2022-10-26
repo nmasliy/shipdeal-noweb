@@ -1,0 +1,43 @@
+<header class="header">
+  <div class="container">
+    <div class="header__inner">
+      <a class="header__logo logo" href="./">
+        <picture>
+          <source srcset="img/logo.avif 1x, img/logo@2x.avif 2x" type="image/avif">
+          <source srcset="img/logo.webp 1x, img/logo@2x.webp 2x" type="image/webp">
+          <img loading="lazy" src="img/logo.png" srcset="img/logo.png 1x, img/logo@2x.png 2x" width="166" height="37"
+            alt="Ship&Deal">
+        </picture>
+      </a>
+      <div class="menu" data-menu>
+      <nav class="nav header__nav" title="site navigation">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#near" data-menu-item>Drivers nearby</a></li>
+          <li class="nav__item"><a href="#reviews" data-menu-item>Reviews</a></li>
+          <li class="nav__item"><a href="#why" data-menu-item>Our advantages</a></li>
+          <li class="nav__item"><a href="#history" data-menu-item>Our story</a></li>
+          <li class="nav__item"><a href="#contacts" data-menu-item>Contacts</a></li>
+        </ul>
+      </nav>
+        <div class="menu__footer">
+          @include('contacts-info.html')
+        </div>
+      </div>
+      <div class="header__languages">
+        <div class="app-select" id="select-languages">
+          <div class="app-select__current">
+            <span class="app-select__value" data-value="1">ENG</span>
+          </div>
+          <div class="app-select__options">
+            <a href="index-2.html" class="app-select__option" data-value="2">RUS</a>
+            <a href="index-2-de.html" class="app-select__option" data-value="3">DEU</a>
+          </div>
+        </div>
+      </div>
+      <a class="header__btn btn-outline" href="#">Sign in</a>
+      <button class="burger" data-burger aria-label="Open menu">
+        <span class="burger__line"></span>
+      </button>
+    </div>
+  </div>
+</header>

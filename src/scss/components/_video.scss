@@ -1,0 +1,73 @@
+.video {
+  padding: 140px 0;
+  background-color: #f2f6fe;
+
+  &__inner {
+    position: relative;
+    padding: 0 182px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 51px;
+      width: 126px;
+      height: 76px;
+      background: url("../img/decor-arrow-3.svg") center no-repeat;
+    }
+  }
+
+  &__title {
+    margin-bottom: 44px;
+  }
+
+  &__box {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      border-radius: 16px;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(0deg, rgba(40, 50, 73, 50%), rgba(40, 50, 73, 50%));
+    }
+
+    picture {
+      display: flex;
+
+      img {
+        border-radius: 16px;
+      }
+    }
+  }
+
+  &__play-btn {
+    @include absolute-center;
+    @include circle(94px, $accent-color);
+    @include flex-all-center;
+
+    z-index: 3;
+    background-image: $accent-gradient;
+    transition: $transition;
+
+    @include hover {
+      background-image: linear-gradient(90deg, #ef8f00 0%, #f09d21 100%);
+    }
+
+    /* stylelint-disable-next-line order/order */
+    &:active,
+    &:focus {
+      background-image: linear-gradient(90deg, #e28800 0%, #e09019 100%);
+    }
+  }
+
+  &--transparent {
+    padding: 0;
+    background-color: transparent;
+  }
+}

@@ -1,0 +1,27 @@
+.calculator {
+  padding: 140px 0;
+  background: url("../img/calculator-bg.svg") center no-repeat;
+  background-color: $primary-color;
+
+  &__inner {
+    margin: 0 auto;
+    max-width: 1070px;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 1.5;
+    color: $white-color;
+  }
+
+  &__subtitle {
+    margin-top: 16px;
+    margin-bottom: 50px;
+    color: $white-color;
+  }
+
+  &__btn {
+    min-width: 280px;
+  }
+}

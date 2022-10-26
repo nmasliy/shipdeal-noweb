@@ -1,0 +1,35 @@
+.contacts {
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1090px;
+  }
+
+  &__content {
+    position: relative;
+    max-width: 340px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: -62px;
+      top: -5px;
+      width: 91px;
+      height: 91px;
+      background: url("../img/decor-arrow-4.svg") center no-repeat;
+    }
+  }
+
+  &__title {
+    margin-bottom: 50px;
+    min-width: 340px;
+  }
+
+  &__map {
+    iframe {
+      border-radius: 10px;
+    }
+  }
+}

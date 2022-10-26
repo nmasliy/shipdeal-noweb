@@ -1,0 +1,70 @@
+.app-select {
+  position: relative;
+
+  &__current {
+    position: relative;
+    display: flex;
+    align-items: center;
+    outline: none;
+    padding: 8px 15px 8px 8px;
+    font-size: 15px;
+    line-height: 1.25;
+    color: $white-color;
+    cursor: pointer;
+    user-select: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      width: 8px;
+      height: 5px;
+      background: url("../img/select-arrow.svg") right center no-repeat;
+      transform: translateY(-50%) rotate(0deg);
+      transition: 0.35s;
+    }
+
+    @include tablet {
+      padding-left: 0;
+      color: $black-color;
+
+      &::after {
+        background: url("../img/select-arrow-black.svg") right center no-repeat;
+      }
+    }
+  }
+
+  &__options {
+    position: absolute;
+    left: 50%;
+    top: calc(100% - 1px);
+    z-index: 3;
+    display: none;
+    border-radius: 6px;
+    width: 94px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 8%);
+    background-color: $white-color;
+    transform: translateX(-50%);
+  }
+
+  &__option {
+    display: block;
+    padding: 12px 32px;
+    color: $black-color;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  &.active {
+    .app-select__options {
+      display: block;
+    }
+
+    .app-select__current {
+      &::after {
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
+  }
+}

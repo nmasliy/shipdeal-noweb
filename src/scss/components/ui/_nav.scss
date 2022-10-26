@@ -1,0 +1,36 @@
+.nav {
+  margin-left: 50px;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    @include mr(33px);
+
+    position: relative;
+    font-size: 14px;
+    line-height: 17px;
+    color: $black-color;
+    transition: $transition;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 1px;
+      background-color: $primary-color;
+      transition: $transition;
+    }
+
+    @include hover {
+      color: $primary-color;
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}

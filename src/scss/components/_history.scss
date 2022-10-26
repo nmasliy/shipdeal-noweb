@@ -1,0 +1,119 @@
+.history {
+  padding: 140px 0;
+  background-color: #f2f6fe;
+
+  &__head {
+    margin-bottom: 45px;
+  }
+
+  &__subtitle {
+    max-width: 730px;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 59px;
+  }
+
+  &__content {
+    max-width: 560px;
+    line-height: 1.5;
+
+    p {
+      margin: 15px 0;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    strong,
+    b {
+      font-weight: 600;
+    }
+
+    ul {
+      margin: 15px 0;
+    }
+
+    li {
+      position: relative;
+      margin-bottom: 12px;
+      padding-left: 23px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 5px;
+        border-radius: 1px;
+        width: 10px;
+        height: 10px;
+        background-color: $primary-color;
+      }
+    }
+
+    &--600 {
+      max-width: 600px;
+
+      ul,
+      p {
+        max-width: 560px;
+      }
+
+      p:first-child {
+        max-width: 600px;
+      }
+    }
+  }
+
+  &__images {
+    position: relative;
+    align-self: flex-start;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -8px;
+      top: calc(50% - 18px);
+      width: 27px;
+      height: 86px;
+      background: url("../img/decor-arrow-outline.svg") center no-repeat;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__box {
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+    margin-bottom: 16px;
+    gap: 16px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__box-title {
+    margin-left: 20px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+    color: $black-color;
+    transform: rotate(180deg);
+  }
+
+  &__img {
+    img {
+      border-radius: 6px;
+    }
+
+    picture {
+      display: flex;
+    }
+  }
+}

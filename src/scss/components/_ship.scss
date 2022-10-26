@@ -1,0 +1,148 @@
+.ship {
+  &__container {
+    max-width: 1412px;
+  }
+
+  &__subtitle {
+    margin-bottom: 10px;
+  }
+
+  &__slider-wrapper {
+    position: relative;
+    overflow: hidden;
+    padding: 0 70px;
+  }
+
+  &__slider {
+    overflow: visible;
+    height: 480px;
+  }
+
+  .swiper-slide {
+    .ship__item {
+      opacity: 0;
+    }
+
+    &.swiper-slide-visible {
+      .ship__item {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__item {
+    padding: 40px 15px;
+    filter: drop-shadow(0 4px 30px rgba(0, 0, 0, 8%));
+    transition: opacity $transition;
+  }
+
+  &__img {
+    position: relative;
+
+    img {
+      border-radius: 10px 10px 0 0;
+      height: 277px;
+    }
+
+    picture {
+      display: flex;
+    }
+  }
+
+  &__badge {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    display: inline-block;
+    border-radius: 4px;
+    padding: 4px 8px 4px 26px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #292d32;
+    background: url("../img/success-icon.svg") left 8px center no-repeat;
+    background-color: rgba(38, 95, 235, 12%);
+
+    &--light {
+      background-color: rgba(255, 255, 255, 90%);
+    }
+  }
+
+  &__info {
+    border-radius: 0 0 10px 10px;
+    padding: 22px 25px;
+    background-color: $white-color;
+  }
+
+  &__row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 2px;
+
+    &:first-child {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__name {
+    font-weight: 600;
+    font-size: 20px;
+    color: #000;
+  }
+
+  &__price {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1;
+    color: $accent-color;
+  }
+
+  &__primary {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: $primary-color;
+  }
+
+  &__date {
+    flex-shrink: 0;
+    font-size: 12px;
+    line-height: 18px;
+    color: #292d32;
+  }
+
+  &__bar {
+    position: relative;
+    align-self: center;
+    margin: 0 5px;
+    border-bottom: 1px dashed rgba($primary-color, 0.14);
+    padding: 0 6px;
+    width: 100%;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &::before {
+      @include circle(8px, $white-color);
+
+      left: 0;
+      border: 1px solid $primary-color;
+    }
+
+    &::after {
+      @include circle(6px);
+
+      right: 0;
+    }
+  }
+
+  &__prev,
+  &__next {
+    background-color: $white-color;
+  }
+}
