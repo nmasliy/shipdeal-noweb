@@ -44,23 +44,32 @@
 
   &__img {
     flex-shrink: 0;
-    width: 1050px;
+    margin-left: 60px;
+    padding-bottom: 40px;
+    width: 574px;
 
     picture {
       display: flex;
     }
-
-    &-mob {
-      display: none;
-    }
   }
 
   &__tabs {
+    position: relative;
     display: flex;
     align-items: center;
     margin-bottom: 24px;
     padding: 0 1px;
     color: $accent-color;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: -47px;
+      top: -12px;
+      width: 125px;
+      height: 75px;
+      background: url("../img/decor-arrow-1.svg") center no-repeat;
+    }
 
     a {
       display: flex;
@@ -113,20 +122,6 @@
         color: $white-color;
         background: $accent-gradient;
       }
-    }
-  }
-
-  &__title {
-    position: relative;
-
-    &::after {
-      content: "";
-      position: absolute;
-      right: -26px;
-      top: -56px;
-      width: 125px;
-      height: 75px;
-      background: url("../img/decor-arrow-1.svg") center no-repeat;
     }
   }
 

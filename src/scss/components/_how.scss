@@ -104,23 +104,8 @@
   &__images {
     position: relative;
     flex-shrink: 0;
-    margin-left: 120px;
-    width: 940px;
-  }
-
-  &__phone {
-    position: absolute;
-    left: -56px;
-    top: 269px;
-  }
-
-  &__img {
-    img {
-      width: 100%;
-    }
-
-    &-mob {
-      display: none;
-    }
+    margin-top: 90px;
+    margin-left: 76px;
+    width: 763px;
   }
 }

@@ -6,6 +6,12 @@
     color: rgba($white-color, 0.8);
   }
 
+  &__item {
+    &--mb {
+      margin-bottom: 20px;
+    }
+  }
+
   &__input {
     display: block;
     border-radius: 8px;

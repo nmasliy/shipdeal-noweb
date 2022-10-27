@@ -5,3 +5,4 @@ import './components/accordion';
 import './components/sliders';
 import './components/select';
 import './components/reviews';
+import './components/modals';
