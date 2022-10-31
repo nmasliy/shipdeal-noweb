@@ -65,6 +65,22 @@ $transition: opacity 0.3s ease-in-out;
   &__btn {
     margin-top: 50px;
     width: 280px;
+    position: relative;
+  }
+
+  &__btn:disabled::before {
+    content: '';
+    background-image: url("../img/loading.svg");
+    background-repeat: no-repeat;
+    background-position: 54% 50%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 100px;
+    background-color: #f90;
   }
 
   &__close {

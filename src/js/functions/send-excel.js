@@ -8,16 +8,22 @@ import SimpleModal from '../functions/modals';
 
     form.addEventListener("submit", e=> {
       e.preventDefault();
-      modals.close('modal-form');
+      const submit = e.submitter;
+      submit.setAttribute('disabled', true);
       fetch(form.action + sheet, {
         method: "POST",
         body: new FormData(document.getElementById('send-excel')),
       }).then(
         responce => responce.json()
       ).then((html) => {
+        submit.setAttribute('disabled', false);
         form.reset();
-        modals.open('modal-thank');
+        modals.close('modal-form');
+        setTimeout( () => {
+          modals.open('modal-thank');
+        }, 300);
       }).catch( e => {
+        submit.setAttribute('disabled', false);
         form.reset();
         modals.close('modal-form');
       })
