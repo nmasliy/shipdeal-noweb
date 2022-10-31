@@ -1,4 +1,5 @@
 import SimpleModal from '../functions/modals';
+import '../functions/send-excel';
 
 const options = {
   disableScroll: true,
