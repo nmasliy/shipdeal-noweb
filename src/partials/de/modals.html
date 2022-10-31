@@ -4,14 +4,14 @@
       <div class="modal__content">
         <h4 class="modal__title title centered">Anfrage hinterlassen</h4>
         <p class="modal__subtitle subtitle centered">Wir informieren Sie, wenn der Dienst bereit&nbsp;ist</p>
-        <form class="modal__form form" action="#">
-          <div class="form__item form__item--mb">
+        <form class="modal__form form" action="https://sheetdb.io/api/v1/fwdl0clfg6d4z" id="send-excel" method="post" data-lang="Deu">
+        <div class="form__item form__item--mb">
             <div class="form__caption">Ihr Name</div>
-            <input class="form__input input-reset" type="text" placeholder="Alex" required>
+          <input class="form__input input-reset" name="data[Имя]" type="text" placeholder="Alex" required>
           </div>
           <div class="form__item">
             <div class="form__caption">Ihre E-Mail</div>
-            <input class="form__input input-reset" type="email" placeholder="example@mail.com" required>
+            <input class="form__input input-reset" name="data[E-mail]" type="email" placeholder="example@mail.com" required>
           </div>
           <div class="centered">
             <button class="modal__btn btn">Antrag hinterlassen</button>
