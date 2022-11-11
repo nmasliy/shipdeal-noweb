@@ -6,3 +6,4 @@ import './components/sliders';
 import './components/select';
 import './components/reviews';
 import './components/modals';
+import './components/donation-counter';

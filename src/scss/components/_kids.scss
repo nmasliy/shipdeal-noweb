@@ -16,6 +16,21 @@
     max-width: 440px;
   }
 
+  &__title {
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: 120px;
+      width: 125px;
+      height: 75px;
+      background: url(../img/decor-arrow-1.svg) center no-repeat;
+      transform: rotate(76deg);
+    }
+  }
+
   &__subtitle {
     margin-bottom: 16px;
     font-weight: 600;
@@ -29,6 +44,61 @@
 
     picture {
       display: flex;
+    }
+  }
+
+  &__bonus {
+    padding: 14px 14px 14px 0;
+    background: #265FEB;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    margin-top: 48px;
+    position: relative;
+
+    &:after {
+      position: absolute;
+      height: 100%;
+      width: 50vw;
+      right: 100%;
+      top: 0;
+      bottom: 0;
+      background: #265FEB;
+      content: '';
+    }
+
+    .bonus__text {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      color: #FFFFFF;
+    }
+    .bonus__currency {
+      color: #FF9900;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 54px;
+    }
+    .bonus__money {
+      color: #FFFFFF;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 54px;
+
+      &.loader {
+        color: #265FEB;
+        position: relative;
+
+        &:after {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translateX(-50%) translateY(-50%);
+          width: 50px;
+          height: 50px;
+          content: '';
+          background: url("../img/loading.svg") no-repeat;
+        }
+      }
     }
   }
 }
