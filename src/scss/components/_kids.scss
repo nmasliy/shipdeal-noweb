@@ -16,21 +16,6 @@
     max-width: 440px;
   }
 
-  &__title {
-    position: relative;
-
-    &:after {
-      content: "";
-      position: absolute;
-      right: -80px;
-      top: 120px;
-      width: 125px;
-      height: 75px;
-      background: url(../img/decor-arrow-1.svg) center no-repeat;
-      transform: rotate(76deg);
-    }
-  }
-
   &__subtitle {
     margin-bottom: 16px;
     font-weight: 600;
@@ -54,6 +39,17 @@
     border-bottom-right-radius: 7px;
     margin-top: 48px;
     position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -120px;
+      width: 125px;
+      height: 75px;
+      background: url(../img/decor-arrow-1.svg) center no-repeat;
+      transform: rotate(76deg);
+    }
 
     &:after {
       position: absolute;
